@@ -8,6 +8,7 @@
   background-color: $primary;
   color: white;
   padding: $defaultPadding;
+  align-items: flex-start;
 
   &_full {
     flex-direction: row;
