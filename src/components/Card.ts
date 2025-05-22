@@ -20,7 +20,7 @@ export class Card extends Component<CardItem> {
         this._category = container.querySelector(`.${blockName}__category`);
         this._title = ensureElement<HTMLElement>(`.${blockName}__title`, container);
         this._image = ensureElement<HTMLImageElement>(`.${blockName}__image`, container);
-        this._description = container.querySelector(`.${blockName}__description`);
+        this._description = container.querySelector(`.${blockName}__text`);
         this._price = ensureElement<HTMLImageElement>(`.${blockName}__price`, container);
         this._button = container.querySelector(`.${blockName}__button`);
 
@@ -50,6 +50,7 @@ export class Card extends Component<CardItem> {
             'дополнительное': 'card__category_additional',
             'кнопка': 'card__category_button'
         };
+        this._category.className = `${this.blockName}__category`;
         this._category.classList.add(`${categories[value]}`)
     }
 
